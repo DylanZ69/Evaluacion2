@@ -11,11 +11,21 @@ function validar(){
     let vEdad = edad.value
     let errorEdad = document.getElementById("errorEdad")
 
-    let validarNombre = validarSoloLetras(eNombre, vNombre, errorNombre)
-    let validarEdad = validarEdad(edad,vEdad,errorEdad)
+    let valiNombre = validarSoloLetras(eNombre, vNombre, errorNombre)
+    let valiEdad = validarEdad(edad,vEdad,errorEdad)
+
+    if (valiNombre == "exito" && valiEdad == "exito"){
+        
+    }
 }
 
 function validarSoloLetras(){
+    if(eNombre = "1,2,3,4,5,6,7,8,9,0"){
+        alert("el nombre solo debe contener letras")
+        
+
+    }
+
 
 }
 
@@ -30,7 +40,11 @@ function validarEdad(elemento, valor, eError){
 }
 
 function eliminar(indice){
-    
+    usuarios = usuarios.filter((p,index)=>{
+        if(index != indice)
+        return p
+    })
+    cargarDatos()
 }
 
 function actualizar(){
